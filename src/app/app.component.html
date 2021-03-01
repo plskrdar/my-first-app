@@ -1,1 +1,18 @@
-<h1>AppComponent works!</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Zadanie 3</h1>
+
+            <button class="btn btn-info"(click)="toggleDetails()">Display Details</button>
+
+            <p *ngIf="showDetails">Secret password = tuna</p>
+
+            <hr>
+
+            <div *ngFor="let log of clicksCollection; let i = index"
+                [ngStyle]="{backgroundColor: (i>=4) ? 'blue' : ''}"
+                [ngClass]="{white: i >= 4}">{{log}}</div>
+        </div>
+    </div>
+</div>
+

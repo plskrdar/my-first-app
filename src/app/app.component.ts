@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+    showDetails = false;
+    clicksCollection = [];
+
+    constructor() {
+    }
+
+    toggleDetails() {
+        this.showDetails = !this.showDetails;
+        this.clicksCollection.push(Date.now());
+    }
 }
